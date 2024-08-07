@@ -44,6 +44,11 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
+
 
    
    
@@ -708,13 +713,14 @@
       
                               <th class="fw-bold"> اسم المشروع</th>
                               <th class="fw-bold"> اسم العميل</th>
+                              <th class="fw-bold"> رقم الموبايل</th>
+                              <th class="fw-bold">  تفاصيل المشروع</th>
                               <th class="fw-bold"> نسبه الانتهاء </th>
                               <th class="fw-bold">  الحالة </th>
                               <th class="fw-bold">  تاريخ الاستحقاق </th>
                               <th class="fw-bold">  رابط المشروعAndroid</th>
                               <th class="fw-bold">  رابط المشروع Ios </th>
                               <th class="fw-bold">  رابط Api</th>
-                              <th class="fw-bold">رابط Git Hub</th>
 
                               <th class="fw-bold"> Action</th>
                             </tr>
@@ -731,6 +737,8 @@
                               <td>
                                 شركة الادوية
                               </td>
+                              <td></td>
+                              <td></td>
                               <td>
                                 <span  class="d-block text-black"> 63% </span>                           
                                 
@@ -747,7 +755,7 @@
                               <td></td>
                               <td></td>
                               <td></td>
-                              <td></td>
+                              
                               <td class="d-flex justify-content-center">
                                 <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
                                 <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="ProjectDetails.html" title="تفاصيل المشروع"><i class="ti ti-eye  fs-4"></i> </a>
@@ -768,6 +776,8 @@
                               <td>
                                 شركة الادوية
                               </td>
+                              <td></td>
+                              <td></td>
                               <td>
                                 <span  class="d-block text-black"> 63% </span>                           
                                 
@@ -784,7 +794,7 @@
                               <td></td>
                               <td></td>
                               <td></td>
-                              <td></td>
+                              
                               <td class="d-flex justify-content-center">
                                 <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
                                 <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="ProjectDetails.html" title="تفاصيل المشروع"><i class="ti ti-eye  fs-4"></i> </a>
@@ -805,6 +815,8 @@
                               <td>
                                 شركة الادوية
                               </td>
+                              <td></td>
+                              <td></td>
                               <td>
                                 <span  class="d-block text-black"> 100% </span>                           
                                 
@@ -821,7 +833,7 @@
                               <td></td>
                               <td></td>
                               <td></td>
-                              <td></td>
+                             
                               <td class="d-flex justify-content-center">
                                 <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
                                 <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="ProjectDetails.html" title="تفاصيل المشروع"><i class="ti ti-eye  fs-4"></i> </a>
@@ -862,24 +874,22 @@
                   
                       <div class="mb-3 col-md-4 col-12">
                         <label for="name-project" class="form-label">    اسم المشروع<span class="start-form">*</span></label>
-                        <input type="text" class="form-control" id="name-project" placeholder="    اسم المشروع ">
+                        <input type="text" class="form-control" id="name-project" placeholder="    اسم المشروع " disabled>
                       </div>
                       <div class="mb-3 col-md-4 col-12">
                         <label for="name-clent" class="form-label">    اسم العميل<span class="start-form">*</span></label>
-                        <input type="text" class="form-control" id="name-clent" placeholder="    اسم العميل ">
+                        <input type="text" class="form-control" id="name-clent" placeholder="    اسم العميل "disabled>
                       </div>
                       <div class="mb-3 col-md-4 col-12">
-                        <label for="number-design" class="form-label">     مدة تنفيذ التصميم<span class="start-form">*</span></label>
-                        <input type="number" class="form-control" id="number-design" min="1">
+                        <label for="number-clent" class="form-label">      رقم الموبايل<span class="start-form">*</span></label>
+                        <input type="tel" class="form-control" id="number-clent">
                       </div>
-                      <div class="mb-3 col-md-4 col-12">
-                        <label for="namber-code" class="form-label">     مدة تنفيذ البرمجة<span class="start-form">*</span></label>
-                        <input type="number" class="form-control" id="namber-code">
+                      <div class="mb-3 col-md-8 col-12">
+                          
+                        <label for="Project-Description" class="form-label">       تفاصيل عن المشروع<span class="start-form">*</span></label>
+                        <textarea id="Project-Description" class="form-control" rows="1"></textarea>
                       </div>
-                      <div class="mb-3 col-md-4 col-12">
-                        <label for="Application-designs" class="form-label">      تصميمات التطبيق<span class="start-form">*</span></label>
-                        <input type="file" class="form-control" id="Application-designs">
-                      </div>
+                     
                       <div class="mb-3 col-md-4 col-12">
                         <label for="link-url" class="form-label">       رابط المشروعAndroid<span class="start-form">*</span></label>
                         <input type="url" class="form-control" id="link-url">
@@ -892,15 +902,20 @@
                         <label for="link-url-api" class="form-label">       رابط Api <span class="start-form">*</span></label>
                         <input type="url" class="form-control" id="link-url-api">
                       </div>
-                      <div class="mb-3 col-md-4 col-12">
-                        <label for="link-url-Git" class="form-label">       رابط Git Hub <span class="start-form">*</span></label>
-                        <input type="url" class="form-control" id="link-url-Git">
+                     
+                      
+                      <div class="col-md-4 mb-3 col-12">
+                        <label class="form-label" for="condition-2">الحالة</label>
+                        <select class="select2 from-select" id="condition-2">
+                          <option >Active</option>
+                          <option >Pending </option>
+    
+                          <option>completed</option>
+                          <option>finished</option>
+                    
+                        </select>
                       </div>
-                      <div class="mb-3 col-md-4 col-12">
-                        <label for="namber-test" class="form-label">     مدة التست<span class="start-form">*</span></label>
-                        <input type="number" class="form-control" id="namber-test">
-                      </div>
-                      <div class="mb-3 col-md-8 col-12">
+                      <div class="mb-3 col-md-12 col-12">
                         <label for="Project-attachments" class="form-label">       مرفقات المشروع<span class="start-form">*</span></label>
                         <div class="upload-area">
                           <i class="fas fa-file-upload"></i>
@@ -999,7 +1014,8 @@
     <script src="./assets/vendor/js/menu.js"></script>
 
     <!-- endbuild -->
-
+    <script src="./assets/vendor/libs/select2/select2.js"></script>
+    <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
     <!-- Vendors JS -->
     <script src="./assets/vendor/js/dropdown-hover.js"></script>
     <script src="./assets/vendor/js/mega-dropdown.js"></script>
@@ -1017,7 +1033,7 @@
      <!-- Page JS -->
      <script src="./assets/js/charts-apex.js"></script>
      <script src="./assets/js/cards-advance.js"></script>
-
+     <script src="./assets/js/forms-selects.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>
      <script>
       const uploadArea = document.querySelector('.upload-area');

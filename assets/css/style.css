@@ -528,3 +528,7 @@ border: none;
 border-radius: 5px;
 cursor: pointer;
 }
+.bs-stepper .step.active .bs-stepper-circle {
+  background-color:rgb(var(--theme-color))!important;
+  color: #fff;
+}

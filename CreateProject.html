@@ -44,9 +44,12 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
-   
-   
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
@@ -646,66 +649,278 @@
               
              </div>
              <div class="card comonent-hader-top p-2 mt-4">
-  
-                <form class="form-content  row mx-0">
-                  
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="name-project" class="form-label">    اسم المشروع<span class="start-form">*</span></label>
-                    <input type="text" class="form-control" id="name-project" placeholder="    اسم المشروع ">
+              <div class="bs-stepper wizard-numbered mt-2">
+                <div class="bs-stepper-header">
+                  <div class="step" data-target="#account-details">
+                    <button type="button" class="step-trigger">
+                      <span class="bs-stepper-circle">1</span>
+                      <span class="bs-stepper-label">
+                        <span class="bs-stepper-title"> بيانات المشروع</span>
+                        <span class="bs-stepper-subtitle">Setup project's data Details</span>
+                      </span>
+                    </button>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="name-clent" class="form-label">    اسم العميل<span class="start-form">*</span></label>
-                    <input type="text" class="form-control" id="name-clent" placeholder="    اسم العميل ">
+                  <div class="line">
+                    <i class="ti ti-chevron-right"></i>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="number-design" class="form-label">     مدة تنفيذ التصميم<span class="start-form">*</span></label>
-                    <input type="number" class="form-control" id="number-design" min="1">
+                  <div class="step" data-target="#personal-info">
+                    <button type="button" class="step-trigger">
+                      <span class="bs-stepper-circle">2</span>
+                      <span class="bs-stepper-label">
+                        <span class="bs-stepper-title"> ui-ux</span>
+                        <span class="bs-stepper-subtitle">Add ui-ux details </span>
+                      </span>
+                    </button>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="namber-code" class="form-label">     مدة تنفيذ البرمجة<span class="start-form">*</span></label>
-                    <input type="number" class="form-control" id="namber-code">
+                  <div class="line">
+                    <i class="ti ti-chevron-right"></i>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="Application-designs" class="form-label">      تصميمات التطبيق<span class="start-form">*</span></label>
-                    <input type="file" class="form-control" id="Application-designs">
+                  <div class="step" data-target="#social-links">
+                    <button type="button" class="step-trigger">
+                      <span class="bs-stepper-circle">3</span>
+                      <span class="bs-stepper-label">
+                        <span class="bs-stepper-title">  Back-End</span>
+                        <span class="bs-stepper-subtitle">Add Back-End details</span>
+                      </span>
+                    </button>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="link-url" class="form-label">       رابط المشروعAndroid<span class="start-form">*</span></label>
-                    <input type="url" class="form-control" id="link-url">
+
+                  <div class="line">
+                    <i class="ti ti-chevron-right"></i>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="link-url-ios" class="form-label">       رابط المشروع Ios <span class="start-form">*</span></label>
-                    <input type="url" class="form-control" id="link-url-ios">
+                  <div class="step" data-target="#Escorts-links">
+                    <button type="button" class="step-trigger">
+                      <span class="bs-stepper-circle">4</span>
+                      <span class="bs-stepper-label">
+                        <span class="bs-stepper-title"> mobile</span>
+                        <span class="bs-stepper-subtitle">Add mobile details</span>
+                      </span>
+                    </button>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="link-url-api" class="form-label">       رابط Api <span class="start-form">*</span></label>
-                    <input type="url" class="form-control" id="link-url-api">
+                  <div class="line">
+                    <i class="ti ti-chevron-right"></i>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="link-url-Git" class="form-label">       رابط Git Hub <span class="start-form">*</span></label>
-                    <input type="url" class="form-control" id="link-url-Git">
+                  <div class="step" data-target="#file-links">
+                    <button type="button" class="step-trigger">
+                      <span class="bs-stepper-circle">5</span>
+                      <span class="bs-stepper-label">
+                        <span class="bs-stepper-title"> testing</span>
+                        <span class="bs-stepper-subtitle">Add testing details</span>
+                      </span>
+                    </button>
                   </div>
-                  <div class="mb-3 col-md-4 col-12">
-                    <label for="namber-test" class="form-label">     مدة التست<span class="start-form">*</span></label>
-                    <input type="number" class="form-control" id="namber-test">
-                  </div>
-                  <div class="mb-3 col-md-8 col-12">
-                    <label for="Project-attachments" class="form-label">       مرفقات المشروع<span class="start-form">*</span></label>
-                    <div class="upload-area">
-                      <i class="fas fa-file-upload"></i>
-                      <p>Drag and drop files here or click here</p>
+                </div>
+                <div class="bs-stepper-content">
+                  <form onSubmit="return false">
+                    <!-- Account Details -->
+                    <div id="account-details" class="content">
+                      <div class="content-header mb-3">
+                        <h6 class="mb-0 fs-3 fw-bold">البيانات المشروع</h6>
+                      </div>
+                     <div class="row g-3">
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="name-project" class="form-label">    اسم المشروع<span class="start-form">*</span></label>
+                          <input type="text" class="form-control" id="name-project" placeholder="    اسم المشروع ">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="name-clent" class="form-label">    اسم العميل<span class="start-form">*</span></label>
+                          <input type="text" class="form-control" id="name-clent" placeholder="    اسم العميل ">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="number-clent" class="form-label">      رقم الموبايل<span class="start-form">*</span></label>
+                          <input type="tel" class="form-control" id="number-clent">
+                        </div>
+                        <div class="col-md-4 mb-3 col-12">
+                          <label class="form-label" for="condition-2">الحالة</label>
+                          <select class="select2 from-select" id="condition-2">
+                            <option >Active</option>
+                            <option >Pending </option>
+      
+                            <option>completed</option>
+                            <option>finished</option>
+                      
+                          </select>
+                        </div>
+                        <div class="mb-3 col-md-8 col-12">
+                          
+                          <label for="Project-Description" class="form-label">       تفاصيل عن المشروع<span class="start-form">*</span></label>
+                          <textarea id="Project-Description" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between">
+                          <button class="btn btn-label-secondary btn-prev" disabled>
+                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                          </button>
+                          <button class="btn btn-primary btn-next">
+                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                            <i class="ti ti-arrow-right"></i>
+                          </button>
+                        </div>
+                     </div>
+                     
                     </div>
-                    <ul class="file-list"></ul>
-                  </div>
-                  
-                    <div>
-                      <button type="submit" class="btn btn-primary me-sm-3 px-5 me-1 waves-effect waves-light">حفظ</button>
+                    <!-- Cmopany Info -->
+                    <div id="personal-info" class="content">
+                      <div class="content-header mb-3">
+                        <h6 class="mb-0 fs-3 fw-bold">البيانات ui-ux</h6>
+                      </div>
+                      <div class="row g-3">
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="number-design" class="form-label">     مدة تنفيذ التصميم<span class="start-form">*</span></label>
+                          <input type="number" class="form-control" id="number-design" min="1">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
+                          <input type="date" class="form-control" id="Start-Date">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
+                          <input type="date" class="form-control" id="Start-Date">
+                        </div>
+                        <div class="mb-3 col-md-12 col-12">
+                          <label for="Project-attachments" class="form-label">       مرفقات التصميم<span class="start-form">*</span></label>
+                          <div class="upload-area">
+                            <i class="fas fa-file-upload"></i>
+                            <p>Drag and drop files here or click here</p>
+                          </div>
+                          <ul class="file-list"></ul>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between">
+                          <button class="btn btn-label-secondary btn-prev">
+                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                          </button>
+                          <button class="btn btn-primary btn-next">
+                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                            <i class="ti ti-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                </form>
-            
-            </div>
-            </div>
-          
+                    <!--   Back-End -->
+                    <div id="social-links" class="content">
+                      <div class="content-header mb-3">
+                        <h6 class="mb-0 fs-3 fw-bold"> تفاصيل   Back-End</h6>
+                      
+                      </div>
+                      <div class="row g-3">
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
+                          <input type="date" class="form-control" id="Start-Date">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
+                          <input type="date" class="form-control" id="Start-Date">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="link-url-api" class="form-label">       رابط Api <span class="start-form">*</span></label>
+                          <input type="url" class="form-control" id="link-url-api">
+                        </div>
+                        <div class="mb-3 col-md-12 col-12">
+                          <label for="Project-attachments" class="form-label">       مرفقات <span class="start-form">*</span></label>
+                          <div class="upload-area">
+                            <i class="fas fa-file-upload"></i>
+                            <p>Drag and drop files here or click here</p>
+                          </div>
+                          <ul class="file-list"></ul>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between">
+                          <button class="btn btn-label-secondary btn-prev">
+                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                          </button>
+                          <button class="btn btn-primary btn-next">
+                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                            <i class="ti ti-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                     <!-- Escorts-links -->
+                     <div id="Escorts-links" class="content">
+                      <div class="content-header mb-3">
+                        <h6 class="mb-0 fs-3 fw-bold">البيانات mobile</h6>
+                      </div>
+
+                      <div class="row">
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="number-design" class="form-label">     مدة تنفيذ البرامجة<span class="start-form">*</span></label>
+                          <input type="number" class="form-control" id="number-design" min="1">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
+                          <input type="date" class="form-control" id="Start-Date">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
+                          <input type="date" class="form-control" id="Start-Date">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="link-url" class="form-label">       رابط المشروعAndroid<span class="start-form">*</span></label>
+                          <input type="url" class="form-control" id="link-url">
+                        </div>
+                        <div class="mb-3 col-md-4 col-12">
+                          <label for="link-url-ios" class="form-label">       رابط المشروع Ios <span class="start-form">*</span></label>
+                          <input type="url" class="form-control" id="link-url-ios">
+                        </div>
+                      </div>
+
+                        <div class="col-12 d-flex justify-content-between mt-2">
+                          <button class="btn btn-label-secondary btn-prev">
+                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                          </button>
+                          <button class="btn btn-primary btn-next">
+                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                            <i class="ti ti-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                
+                      <!-- file-links -->
+                      <div id="file-links" class="content">
+                        <div class="content-header mb-3">
+                          <h6 class="mb-0 fs-3 fw-bold">المستندات </h6>
+                       
+                        </div>
+                        <div class="row">
+                          <div class="mb-3 col-md-4 col-12">
+                            <label for="number-design" class="form-label">     مدة تنفيذ <span class="start-form">*</span></label>
+                            <input type="number" class="form-control" id="number-design" min="1">
+                          </div>
+                          <div class="mb-3 col-md-4 col-12">
+                            <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
+                            <input type="date" class="form-control" id="Start-Date">
+                          </div>
+                          <div class="mb-3 col-md-4 col-12">
+                            <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
+                            <input type="date" class="form-control" id="Start-Date">
+                          </div>
+                          <div class="mb-3 col-md-12 col-12">
+                            <label for="Project-attachments" class="form-label">       مرفقات <span class="start-form">*</span></label>
+                            <div class="upload-area">
+                              <i class="fas fa-file-upload"></i>
+                              <p>Drag and drop files here or click here</p>
+                            </div>
+                            <ul class="file-list"></ul>
+                          </div>
+                        </div>
+                          <div class="col-12 d-flex justify-content-between">
+                          
+                            <button class="btn btn-label-secondary btn-prev">
+                              <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                              <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                            </button>
+                            <div>
+                              <button class="btn btn-primary btn-submit">حفظ</button>
+                            </div>
+                          </div>
+                       
+                      </div>
+                  </form>
+                </div>
+              </div>
+              
             
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
@@ -793,6 +1008,13 @@
     <script src="./assets/vendor/js/mega-dropdown.js"></script>
     <!-- Vendors JS -->
     <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="./assets/vendor/libs/select2/select2.js"></script>
+    <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+    <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+    <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
 
 
     
@@ -805,8 +1027,12 @@
      <!-- Page JS -->
      <script src="./assets/js/charts-apex.js"></script>
      <script src="./assets/js/cards-advance.js"></script>
-
+     <script src="./assets/js/forms-selects.js"></script>
+     <script src="./assets/vendor/js/chart.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>
+     <script src="./assets/vendor/js/accordion.js"></script>
+     <script src="./assets/js/forms-extras.js"></script>
+     <script src="./assets/js/form-wizard-numbered.js"></script>
   <script>
     const uploadArea = document.querySelector('.upload-area');
     const fileList = document.querySelector('.file-list');

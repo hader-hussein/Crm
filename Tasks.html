@@ -59,6 +59,16 @@
     <script src="./assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="./assets/js/config.js"></script>
+    <style>
+      .select2-container--default{
+ 
+ z-index: 10000 !important;
+ }
+      .table-project tr td{
+        padding: 1px;
+
+      }
+    </style>
   </head>
   
   <body>
@@ -741,81 +751,86 @@
             </div>
           <!-- Add  Modal -->
           <div class="modal fade" id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
               <div class="modal-content p-3 ">
                 <div class="modal-header px-0">
                   <h1 class="modal-title fs-4 fw-bold text-tilte-b">    اضافة بيانات المهمه</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-0">
-                  <form class="row component-form  mx-0">
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="componyname-e"> اسم المشروع</label>
-                      <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="city-2">النوع</label>
-                      <select class="select2 from-select" id="city-2">
-                        <option >برمجه</option>
-                        <option >موبيال ابلكشين</option>
+                  <div class="table-responsive text-nowrap rounded table-project">
+                    <form>
+                      <table class="table table-bordered table-hover rounded">
+                        <thead class="table-light">
+                          <tr class="fw-bold">
+                            <th class="fw-bold">اسم المشروع</th>
+                            <th class="fw-bold">النوع</th>
+                            <th class="fw-bold">اسم الشاشة</th>
+                            <th class="fw-bold">مدة التنفيذ</th>
+                            <th class="fw-bold">تاريخ البدء</th>
+                            <th class="fw-bold">تاريخ الانتهاء</th>
+                            <th class="fw-bold">الحالة</th>
+                            <th class="fw-bold">action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="table-body">
+                          <tr>
+                            <td>
+                              <select class="select2 from-select">
+                                <option>شركة الادوية</option>
+                                <option>شركة الاعلاف</option>
+                                <option>شركة المواد الغذئية</option>
+                              </select>
+                            </td>
+                            <td>
+                              <select class="select2 from-select">
+                                <option>برمجه</option>
+                                <option>موبيال ابلكشين</option>
+                                <option>تصميم</option>
+                                <option>تيست</option>
+                              </select>
+                            </td>
+                            <td class="project-name-column">
+                              <input type="text" class="form-control" placeholder="اسم الشاشة" />
+                            </td>
+                            <td>
+                              <input type="number" class="form-control" min="1" />
+                            </td>
+                            <td>
+                              <input type="date" class="form-control" />
+                            </td>
+                            <td>
+                              <input type="date" class="form-control" />
+                            </td>
+                            <td>
+                              <select class="select2 from-select">
+                                <option>Active</option>
+                                <option>Pending</option>
+                                <option>completed</option>
+                                <option>finished</option>
+                              </select>
+                            </td>
+                            <td class="d-flex">
+                              <button type="button" class="bg-danger btn removeRowButton text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+                                <i class="ti ti-trash fs-4"></i>
+                              </button>
+                              <button type="button" class="button btn btn-primary add_another addRowButton" value="Add another line">
+                                <i class="fa-solid fa-plus"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </form>
+                  </div>
 
-                        <option>تصميم</option>
-                        <option>تيست</option>
-                  
-                      </select>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page"> اسم الشاشة</label>
-                      <input type="text" id="name-page" class="form-control" placeholder="اسم الشاشة " />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page">  مدة التنفيذ</label>
-                      <input type="number" id="name-page" class="form-control"min="1" />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page">   تاريخ البدء</label>
-                      <input type="date" id="name-page" class="form-control" />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page">   تاريخ الانتهاء</label>
-                      <input type="date" id="name-page" class="form-control"min="1" />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="condition">الحالة</label>
-                      <select class="select2 from-select" id="condition">
-                        <option >Active</option>
-                        <option >Pending </option>
-
-                        <option>completed</option>
-                        <option>finished</option>
-                  
-                      </select>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="Team Member">فريق العمل</label>
-                      <select class="select2 from-select" id="Team Member">
-                        <option >احمد محمد </option>
-                        <option >هدير حسين </option>
-
-                        <option>ابراهيم السيد</option>
-                        <option>اسامه عزت</option>
-                  
-                      </select>
-                    </div>
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-                 
-              
               </div>
             </div>
           </div>
           </div>
           <!---->
           <div class="modal fade" id="edit-modeil" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-dialog  modal-dialog-centered">
               <div class="modal-content p-3 ">
                 <div class="modal-header px-0">
                   <h1 class="modal-title fs-4 fw-bold text-tilte-b">    تعديل بيانات المهمه</h1>
@@ -823,38 +838,8 @@
                 </div>
                 <div class="modal-body px-0">
                   <form class="row component-form  mx-0">
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="componyname-e"> اسم المشروع</label>
-                      <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="type-2">النوع</label>
-                      <select class="select2 from-select" id="type-2">
-                        <option >برمجه</option>
-                        <option >موبيال ابلكشين</option>
-
-                        <option>تصميم</option>
-                        <option>تيست</option>
                   
-                      </select>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page"> اسم الشاشة</label>
-                      <input type="text" id="name-page" class="form-control" placeholder="اسم الشاشة " />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page">  مدة التنفيذ</label>
-                      <input type="number" id="name-page" class="form-control"min="1" />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page">   تاريخ البدء</label>
-                      <input type="date" id="name-page" class="form-control" />
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="name-page">   تاريخ الانتهاء</label>
-                      <input type="date" id="name-page" class="form-control"min="1" />
-                    </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-12 col-12 mb-3">
                       <label class="form-label" for="condition-2">الحالة</label>
                       <select class="select2 from-select" id="condition-2">
                         <option >Active</option>
@@ -865,17 +850,7 @@
                   
                       </select>
                     </div>
-                    <div class="col-md-4 mb-3">
-                      <label class="form-label" for="Team Member-1">فريق العمل</label>
-                      <select class="select2 from-select" id="Team Member-1">
-                        <option >احمد محمد </option>
-                        <option >هدير حسين </option>
-
-                        <option>ابراهيم السيد</option>
-                        <option>اسامه عزت</option>
                   
-                      </select>
-                    </div>
                     <div class="pt-2">
                       <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
 
@@ -959,7 +934,7 @@
     <script src="./assets/vendor/libs/jquery/jquery.js"></script>
     <script src="./assets/vendor/libs/popper/popper.js"></script>
     <script src="./assets/vendor/js/bootstrap.js"></script>
-    <script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
+    <!-- <script src="./assets/vendor/libs/node-waves/node-waves.js"></script> -->
     <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="./assets/vendor/libs/hammer/hammer.js"></script>
     <script src="./assets/vendor/libs/i18n/i18n.js"></script>
@@ -990,6 +965,99 @@
     
      <script src="./assets/js/forms-selects.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>
+     <script>
+      $(document).ready(function() {
+        // Initialize select2
+        $('.select2').select2();
   
+        // Function to add a new row
+        function addRow() {
+          var newRow = `
+            <tr>
+              <td style="width: 20%">
+                <select class="select2 from-select">
+                  <option>شركة الادوية</option>
+                  <option>شركة الاعلاف</option>
+                  <option>شركة المواد الغذئية</option>
+                </select>
+              </td>
+              <td>
+                <select class="select2 from-select">
+                  <option>برمجه</option>
+                  <option>موبيال ابلكشين</option>
+                  <option>تصميم</option>
+                  <option>تيست</option>
+                </select>
+              </td>
+              <td  class="project-name-column">
+                <input type="text" class="form-control" placeholder="اسم الشاشة" />
+              </td>
+              <td>
+                <input type="number" class="form-control" min="1" />
+              </td>
+              <td>
+                <input type="date" class="form-control" />
+              </td>
+              <td>
+                <input type="date" class="form-control" />
+              </td>
+              <td>
+                <select class="select2 from-select">
+                  <option>Active</option>
+                  <option>Pending</option>
+                  <option>completed</option>
+                  <option>finished</option>
+                </select>
+              </td>
+              <td class="d-flex">
+                <button type="button" class="bg-danger btn removeRowButton text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" title="حذف">
+                  <i class="ti ti-trash fs-4"></i>
+                </button>
+              </td>
+            </tr>
+          `;
+          $('#table-body').append(newRow);
+          // Re-initialize select2 for the new row
+          $('.select2').select2();
+          // Move the add button to the last row
+          moveAddButton();
+        }
+  
+        // Function to remove a row
+        function removeRow(button) {
+          $(button).closest('tr').remove();
+          // Move the add button to the last row if rows remain
+          if ($('#table-body tr').length > 0) {
+            moveAddButton();
+          }
+        }
+  
+        // Function to move the add button to the last row
+        function moveAddButton() {
+          $('.addRowButton').remove(); // Remove existing add button
+          // Append add button to the last row
+          $('#table-body tr:last').find('td:last').append(`
+            <button type="button" class="button btn btn-primary add_another addRowButton" value="Add another line">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          `);
+        }
+  
+        // Add new row on button click
+        $(document).on('click', '.addRowButton', function() {
+          addRow();
+        });
+  
+        // Remove row on button click
+        $(document).on('click', '.removeRowButton', function() {
+          removeRow(this);
+        });
+  
+        // Initial move of add button to the last row
+        moveAddButton();
+          // Adjust column width with JavaScript
+      $('.project-name-column').css('width', '50%');
+      });
+    </script>
   </body>
 </html>
