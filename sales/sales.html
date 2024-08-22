@@ -99,7 +99,9 @@
      .item-item-lest .item:last-child{
 grid-column: span 3;
      }
-    
+    .table-date tr td,  .table-date tr th{
+padding:0.55rem ;
+    }
   </style>
 </head>
 
@@ -703,7 +705,7 @@ grid-column: span 3;
                 </div>
               </div>
               <div class="table-responsive text-nowrap rounded mt-4">
-                <table class="table table-bordered table-hover rounded text-center">
+                <table class="table table-bordered table-hover rounded text-center table-date">
                   <thead class="table-light">
                     <tr>
                       <th rowspan="2">التسلسل</th>
@@ -711,7 +713,7 @@ grid-column: span 3;
 
                       </th>
                       <th colspan="4" scope="col"> Tele sales</th>
-                      <th rowspan="2"></th>
+                   
                       <th colspan="4" scope="col">  sales</th>
                       <th rowspan="2"></th>
                     </tr>
@@ -720,7 +722,7 @@ grid-column: span 3;
 
                         <i class="fa-solid fa-chevron-down"></i>
                       </th>
-                      <th class="fw-bold">Customer Name
+                      <th class="fw-bold"  width="70%">Customer Name
                         <i class="fa-solid fa-chevron-down"></i>
                       </th>
 
@@ -752,8 +754,8 @@ grid-column: span 3;
                   <tbody class="table-border-bottom-0">
                     <tr>
                       <td> 1 </td>
-                      <td>شركة الأغذية</td>
-                      <td>
+                      <td>شركة الأغذية شركة الأغذيةشركة الأغذية</td>
+                      <td  width="70%">
                         <input type="text" class="form-control" placeholder="اسم الشخص">
                       </td>
                       <td>01004587544</td>
@@ -774,22 +776,7 @@ grid-column: span 3;
                         احمد محمد
                       </td>
 
-                      <td>
-                        <div class="d-flex justify-content-center">
-                          <button
-                            class="bg-primary  btn text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded "
-                            title="   اضافة تعليق  تلي سيلز" data-bs-target="#editModal" data-bs-toggle="modal"><i
-                              class="ti ti-pencil  fs-4"></i></button>
-                          <button
-                            class="bg-secondary text-white    btn   p-1 d-flex align-items-center justify-content-center  mx-2 rounded"
-                            title="طباعه/مشاهدة" data-bs-target="#viewModal" data-bs-toggle="modal"><i
-                              class="fa-solid fa-eye fs-4"></i> </button>
-                              <a
-                              class="bg-success text-bg-success   btn   p-1 d-flex align-items-center justify-content-center  mx-2 rounded"
-                              title="طباعه/مشاهدة" href="./print/print-sales.html"><i
-                                class="fa-solid fa-print fs-4"></i> </a>
-                        </div>
-                      </td>
+                     
                       <td>
                         22/8/2024
                       </td>
@@ -808,10 +795,21 @@ grid-column: span 3;
                       <td>
                         <div class="d-flex justify-content-center">
                           <button
-                            class="bg-primary  btn text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded "
+                            class="bg-primary  btn text-bg-primary p-1 mx-1 d-flex align-items-center justify-content-center  rounded "
                             title="  مسؤل المبيعات" data-bs-target="#editModal-sales" data-bs-toggle="modal"><i
                               class="ti ti-pencil  fs-4"></i>مسول المبيعات</button>
-                       
+                              <button
+                              class="bg-primary  btn text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded "
+                              title="   اضافة تعليق  تلي سيلز" data-bs-target="#editModal" data-bs-toggle="modal"><i
+                                class="ti ti-pencil  fs-4"></i></button>
+                            <button
+                              class="bg-secondary text-white    btn   p-1 d-flex align-items-center justify-content-center  mx-2 rounded"
+                              title="طباعه/مشاهدة" data-bs-target="#viewModal" data-bs-toggle="modal"><i
+                                class="fa-solid fa-eye fs-4"></i> </button>
+                                <a
+                                class="bg-success text-bg-success   btn   p-1 d-flex align-items-center justify-content-center  mx-2 rounded"
+                                title="طباعه/مشاهدة" href="./print/print-sales.html"><i
+                                  class="fa-solid fa-print fs-4"></i> </a>
                         </div>
                       </td>
                     </tr>
