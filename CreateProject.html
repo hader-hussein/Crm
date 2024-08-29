@@ -711,52 +711,52 @@
                   </div>
                 </div>
                 <div class="bs-stepper-content">
-                  <form onSubmit="return false">
+               
                     <!-- Account Details -->
                     <div id="account-details" class="content">
                       <div class="content-header mb-3">
                         <h6 class="mb-0 fs-3 fw-bold">البيانات المشروع</h6>
                       </div>
-                     <div class="row g-3">
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="name-project" class="form-label">    اسم المشروع<span class="start-form">*</span></label>
-                          <input type="text" class="form-control" id="name-project" placeholder="    اسم المشروع ">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="name-clent" class="form-label">    اسم العميل<span class="start-form">*</span></label>
-                          <input type="text" class="form-control" id="name-clent" placeholder="    اسم العميل ">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="number-clent" class="form-label">      رقم الموبايل<span class="start-form">*</span></label>
-                          <input type="tel" class="form-control" id="number-clent">
-                        </div>
-                        <div class="col-md-4 mb-3 col-12">
-                          <label class="form-label" for="condition-2">الحالة</label>
-                          <select class="select2 from-select" id="condition-2">
-                            <option >Active</option>
-                            <option >Pending </option>
-      
-                            <option>completed</option>
-                            <option>finished</option>
-                      
-                          </select>
-                        </div>
-                        <div class="mb-3 col-md-8 col-12">
-                          
-                          <label for="Project-Description" class="form-label">       تفاصيل عن المشروع<span class="start-form">*</span></label>
-                          <textarea id="Project-Description" class="form-control" rows="1"></textarea>
-                        </div>
-                        <div class="col-12 d-flex justify-content-between">
-                          <button class="btn btn-label-secondary btn-prev" disabled>
-                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                          </button>
-                          <button class="btn btn-primary btn-next">
-                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                            <i class="ti ti-arrow-right"></i>
-                          </button>
-                        </div>
-                     </div>
+                      <form>
+                        <div class="row g-3">
+                          <div class="mb-3 col-md-4 col-12">
+                            <label for="name-project" class="form-label">    اسم المشروع<span class="start-form">*</span></label>
+                            <input type="text" class="form-control" id="name-project" placeholder="    اسم المشروع ">
+                          </div>
+                          <div class="mb-3 col-md-4 col-12">
+                            <label for="name-clent" class="form-label">    اسم العميل<span class="start-form">*</span></label>
+                            <input type="text" class="form-control" id="name-clent" placeholder="    اسم العميل ">
+                          </div>
+                          <div class="mb-3 col-md-4 col-12">
+                            <label for="number-clent" class="form-label">      رقم الموبايل<span class="start-form">*</span></label>
+                            <input type="tel" class="form-control" id="number-clent">
+                          </div>
+                          <div class="col-md-4 mb-3 col-12">
+                            <label class="form-label" for="condition-2">الحالة</label>
+                            <select class="select2 from-select" id="condition-2">
+                              <option >Active</option>
+                              <option >Pending </option>
+        
+                              <option>completed</option>
+                              <option>finished</option>
+                        
+                            </select>
+                          </div>
+                          <div class="mb-3 col-md-8 col-12">
+                            
+                            <label for="Project-Description" class="form-label">       تفاصيل عن المشروع<span class="start-form">*</span></label>
+                            <textarea id="Project-Description" class="form-control" rows="1"></textarea>
+                          </div>
+                          <div class="col-12">
+                           
+                            <button class="btn btn-primary btn-next" type="submit">
+                              حفظ
+                              
+                            </button>
+                          </div>
+                       </div>
+                      </form>
+                     
                      
                     </div>
                     <!-- Cmopany Info -->
@@ -764,38 +764,49 @@
                       <div class="content-header mb-3">
                         <h6 class="mb-0 fs-3 fw-bold">البيانات ui-ux</h6>
                       </div>
-                      <div class="row g-3">
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="number-design" class="form-label">     مدة تنفيذ التصميم<span class="start-form">*</span></label>
-                          <input type="number" class="form-control" id="number-design" min="1">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
-                          <input type="date" class="form-control" id="Start-Date">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
-                          <input type="date" class="form-control" id="Start-Date">
-                        </div>
-                        <div class="mb-3 col-md-12 col-12">
-                          <label for="Project-attachments" class="form-label">       مرفقات التصميم<span class="start-form">*</span></label>
-                          <div class="upload-area">
-                            <i class="fas fa-file-upload"></i>
-                            <p>Drag and drop files here or click here</p>
+                      <form>
+                        <div class="row g-3">
+                          <div class="col-md-6 mb-3 col-12">
+                            <label class="form-label" for="select-project">اختر اسم المشروع</label>
+                            <select class="select2 from-select" id="select-project">
+                              <option >مشروع المندوب</option>
+                              <option >مشروع المحطات </option>
+        
+                              <option>مشروع موقع الشركة</option>
+                              <option>مشروع المياة</option>
+                        
+                            </select>
                           </div>
-                          <ul class="file-list"></ul>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="number-design" class="form-label">     مدة تنفيذ التصميم<span class="start-form">*</span></label>
+                            <input type="number" class="form-control" id="number-design" min="1">
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
+                            <input type="date" class="form-control" id="Start-Date">
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
+                            <input type="date" class="form-control" id="Start-Date">
+                          </div>
+                          <div class="mb-3 col-md-12 col-12">
+                            <label for="Project-attachments" class="form-label">       مرفقات التصميم<span class="start-form">*</span></label>
+                            <div class="upload-area">
+                              <i class="fas fa-file-upload"></i>
+                              <p>Drag and drop files here or click here</p>
+                            </div>
+                            <ul class="file-list"></ul>
+                          </div>
+                          <div class="col-12 ">
+                            
+                            <button class="btn btn-primary btn-next" type="submit">
+                              حفظ
+                              
+                            </button>
+                          </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-between">
-                          <button class="btn btn-label-secondary btn-prev">
-                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                          </button>
-                          <button class="btn btn-primary btn-next">
-                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                            <i class="ti ti-arrow-right"></i>
-                          </button>
-                        </div>
-                      </div>
+                      </form>
+                     
                     </div>
                     <!--   Back-End -->
                     <div id="social-links" class="content">
@@ -803,98 +814,30 @@
                         <h6 class="mb-0 fs-3 fw-bold"> تفاصيل   Back-End</h6>
                       
                       </div>
-                      <div class="row g-3">
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
-                          <input type="date" class="form-control" id="Start-Date">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
-                          <input type="date" class="form-control" id="Start-Date">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="link-url-api" class="form-label">       رابط Api <span class="start-form">*</span></label>
-                          <input type="url" class="form-control" id="link-url-api">
-                        </div>
-                        <div class="mb-3 col-md-12 col-12">
-                          <label for="Project-attachments" class="form-label">       مرفقات <span class="start-form">*</span></label>
-                          <div class="upload-area">
-                            <i class="fas fa-file-upload"></i>
-                            <p>Drag and drop files here or click here</p>
+                      <form>
+                        <div class="row g-3">
+                          <div class="col-md-6 mb-3 col-12">
+                            <label class="form-label" for="select-project2">اختر اسم المشروع</label>
+                            <select class="select2 from-select" id="select-project2">
+                              <option >مشروع المندوب</option>
+                              <option >مشروع المحطات </option>
+        
+                              <option>مشروع موقع الشركة</option>
+                              <option>مشروع المياة</option>
+                        
+                            </select>
                           </div>
-                          <ul class="file-list"></ul>
-                        </div>
-                        <div class="col-12 d-flex justify-content-between">
-                          <button class="btn btn-label-secondary btn-prev">
-                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                          </button>
-                          <button class="btn btn-primary btn-next">
-                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                            <i class="ti ti-arrow-right"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                     <!-- Escorts-links -->
-                     <div id="Escorts-links" class="content">
-                      <div class="content-header mb-3">
-                        <h6 class="mb-0 fs-3 fw-bold">البيانات mobile</h6>
-                      </div>
-
-                      <div class="row">
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="number-design" class="form-label">     مدة تنفيذ البرامجة<span class="start-form">*</span></label>
-                          <input type="number" class="form-control" id="number-design" min="1">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
-                          <input type="date" class="form-control" id="Start-Date">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
-                          <input type="date" class="form-control" id="Start-Date">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="link-url" class="form-label">       رابط المشروعAndroid<span class="start-form">*</span></label>
-                          <input type="url" class="form-control" id="link-url">
-                        </div>
-                        <div class="mb-3 col-md-4 col-12">
-                          <label for="link-url-ios" class="form-label">       رابط المشروع Ios <span class="start-form">*</span></label>
-                          <input type="url" class="form-control" id="link-url-ios">
-                        </div>
-                      </div>
-
-                        <div class="col-12 d-flex justify-content-between mt-2">
-                          <button class="btn btn-label-secondary btn-prev">
-                            <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                          </button>
-                          <button class="btn btn-primary btn-next">
-                            <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                            <i class="ti ti-arrow-right"></i>
-                          </button>
-                        </div>
-                      </div>
-                
-                      <!-- file-links -->
-                      <div id="file-links" class="content">
-                        <div class="content-header mb-3">
-                          <h6 class="mb-0 fs-3 fw-bold">المستندات </h6>
-                       
-                        </div>
-                        <div class="row">
-                          <div class="mb-3 col-md-4 col-12">
-                            <label for="number-design" class="form-label">     مدة تنفيذ <span class="start-form">*</span></label>
-                            <input type="number" class="form-control" id="number-design" min="1">
-                          </div>
-                          <div class="mb-3 col-md-4 col-12">
+                          <div class="mb-3 col-md-6 col-12">
                             <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
                             <input type="date" class="form-control" id="Start-Date">
                           </div>
-                          <div class="mb-3 col-md-4 col-12">
+                          <div class="mb-3 col-md-6 col-12">
                             <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
                             <input type="date" class="form-control" id="Start-Date">
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="link-url-api" class="form-label">       رابط Api <span class="start-form">*</span></label>
+                            <input type="url" class="form-control" id="link-url-api">
                           </div>
                           <div class="mb-3 col-md-12 col-12">
                             <label for="Project-attachments" class="form-label">       مرفقات <span class="start-form">*</span></label>
@@ -904,20 +847,117 @@
                             </div>
                             <ul class="file-list"></ul>
                           </div>
-                        </div>
-                          <div class="col-12 d-flex justify-content-between">
-                          
-                            <button class="btn btn-label-secondary btn-prev">
-                              <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                              <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                          <div class="col-12">
+                           
+                            <button class="btn btn-primary btn-next" type="submit">
+                              حفظ
                             </button>
-                            <div>
-                              <button class="btn btn-primary btn-submit">حفظ</button>
+                          </div>
+                        </div>
+                      </form>
+                     
+                    </div>
+                     <!-- Escorts-links -->
+                     <div id="Escorts-links" class="content">
+                      <div class="content-header mb-3">
+                        <h6 class="mb-0 fs-3 fw-bold">البيانات mobile</h6>
+                      </div>
+                      <form>
+                        <div class="row">
+                          <div class="col-md-6 mb-3 col-12">
+                            <label class="form-label" for="select-project3">اختر اسم المشروع</label>
+                            <select class="select2 from-select" id="select-project3">
+                              <option >مشروع المندوب</option>
+                              <option >مشروع المحطات </option>
+        
+                              <option>مشروع موقع الشركة</option>
+                              <option>مشروع المياة</option>
+                        
+                            </select>
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="number-design" class="form-label">     مدة تنفيذ البرامجة<span class="start-form">*</span></label>
+                            <input type="number" class="form-control" id="number-design" min="1">
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
+                            <input type="date" class="form-control" id="Start-Date">
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
+                            <input type="date" class="form-control" id="Start-Date">
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="link-url" class="form-label">       رابط المشروعAndroid<span class="start-form">*</span></label>
+                            <input type="url" class="form-control" id="link-url">
+                          </div>
+                          <div class="mb-3 col-md-6 col-12">
+                            <label for="link-url-ios" class="form-label">       رابط المشروع Ios <span class="start-form">*</span></label>
+                            <input type="url" class="form-control" id="link-url-ios">
+                          </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between mt-2">
+                          
+                          <button class="btn btn-primary btn-next">
+                            حفظ
+                     
+                          </button>
+                        </div>
+                      </form>
+                      
+
+                        
+                      </div>
+                
+                      <!-- file-links -->
+                      <div id="file-links" class="content">
+                        <div class="content-header mb-3">
+                          <h6 class="mb-0 fs-3 fw-bold">المستندات </h6>
+                       
+                        </div>
+                        <form>
+                          <div class="row">
+                            <div class="col-md-6 mb-3 col-12">
+                              <label class="form-label" for="select-project4">اختر اسم المشروع</label>
+                              <select class="select2 from-select" id="select-project4">
+                                <option >مشروع المندوب</option>
+                                <option >مشروع المحطات </option>
+          
+                                <option>مشروع موقع الشركة</option>
+                                <option>مشروع المياة</option>
+                          
+                              </select>
+                            </div>
+                            <div class="mb-3 col-md-6 col-12">
+                              <label for="number-design" class="form-label">     مدة تنفيذ <span class="start-form">*</span></label>
+                              <input type="number" class="form-control" id="number-design" min="1">
+                            </div>
+                            <div class="mb-3 col-md-6 col-12">
+                              <label for="Start-Date" class="form-label">       تاريخ البداية<span class="start-form">*</span></label>
+                              <input type="date" class="form-control" id="Start-Date">
+                            </div>
+                            <div class="mb-3 col-md-6 col-12">
+                              <label for="number-design" class="form-label">       تاريخ النهاية<span class="start-form">*</span></label>
+                              <input type="date" class="form-control" id="Start-Date">
+                            </div>
+                            <div class="mb-3 col-md-12 col-12">
+                              <label for="Project-attachments" class="form-label">       مرفقات <span class="start-form">*</span></label>
+                              <div class="upload-area">
+                                <i class="fas fa-file-upload"></i>
+                                <p>Drag and drop files here or click here</p>
+                              </div>
+                              <ul class="file-list"></ul>
                             </div>
                           </div>
+                          <div>
+                            <button class="btn btn-primary btn-submit">حفظ</button>
+                          </div>
+                        </form>
+                        
+                          
                        
                       </div>
-                  </form>
+                  
                 </div>
               </div>
               
