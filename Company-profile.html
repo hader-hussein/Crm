@@ -58,6 +58,11 @@
     <script src="./assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="./assets/js/config.js"></script>
+    <style>
+      .select2-container--default *{
+z-index: 100000000 !important;
+      }
+    </style>
   </head>
 
   <body>
@@ -750,28 +755,12 @@
                   
                       </select>
                     </div>
-                    <div class="col-md-3 mb-3 col-12">
-                      <label class="form-label" for="select-project4"> نوعه النظام</label>
-                      <select class="select2 from-select" id="select-project4">
-                        <option > برنامج المحاسبة العامة </option>
-                        <option >برنامج ادارة المخزون  </option>
-  
-                        <option>  برنامج ادارة المناديب</option>
                   
-                      </select>
-                    </div>
-                    <div class="mb-3 col-md-3 col-12">
-                      <label for="number-user" class="form-label">  عدد المستخدمين<span class="start-form">*</span></label>
-                      <input type="number" class="form-control" id="number-user" placeholder=" عدد المستخدمين">
-                    </div>
                     <div class="mb-3 col-md-3 col-12">
                       <label for="date-number" class="form-label">  المبلغ<span class="start-form">*</span></label>
                       <input type="number" class="form-control" id="date-number" placeholder=" المبلغ">
                     </div>
-                    <div class="mb-3 col-md-3 col-12">
-                      <label for="file-user" class="form-label">   المرفقات<span class="start-form">*</span></label>
-                      <input type="file" class="form-control" id="file-user">
-                    </div>
+                   
                     <div class="mb-3 col-md-3 col-12">
                       <label for="rate" class="form-label">   نسبة الصيانة السنوية<span class="start-form">*</span></label>
                       <input type="number" class="form-control" id="rate">
@@ -782,6 +771,16 @@
                         <option >   تم السداد </option>
                         <option >  لم يتم سداد  </option>                  
                       </select>
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="file-user" class="form-label">   المرفقات<span class="start-form">*</span></label>
+                      <input type="file" class="form-control" id="file-user">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="file-user" class="form-label">   اضافة برنامج/ عدد المستخدمين<span class="start-form">*</span></label>
+                      <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        اضافة 
+                      </button>
                     </div>
                     <div class="mb-3 col-md-12 col-12">
                       <label for="condetion" class="form-label">     الملاحظات<span class="start-form">*</span></label>
@@ -794,11 +793,81 @@
                         
                       </button>
                     </div>
+                      <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">اضافة البرنامج / عدد المستخدين</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+
+                            <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
+                              <thead class="table-light">
+                                <tr class="fw-bold text-center">
+                              
+                                  <th class="fw-bold">  اسم البرنامج</th>
+
+                                  <th class="fw-bold"> عدد المستخدمين</th>
+                                  
+
+                                  <th class="fw-bold px-1"> Actions</th>
+                                </tr>
+                              </thead>
+                              <tbody class="table-border-bottom-0">
+                                <tr>
+
+                                  <td class="w-30"> 
+                                    <select id="select-p" class="select2 form-select" data-allow-clear="true">
+                                      <option value="AK">   برنامج المقاولات</option>
+                                      <option value="HI">المحاسبة العامة</option>
+                                      <option value="CA">الضراب</option>
+                                      <option value="NV">شون قانونية</option>
+                                  
+                                    </select>
+                                  </td>
+                                  
+
+                                  <td>
+                                    <input type="number"  class="form-control" placeholder="عدد المستخدمين">   
+
+                                  </td>
+
+                                  <td class="d-flex justify-content-center">
+                                    <a class="bg-primary text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded add-row" href="javascript:void(0);" title="اضافة">
+                                      <i class="fa-solid fa-plus fs-5"></i>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                          
+                            </table>
+                           
+                            <div>
+                           
+
+
+                            </div>
+
+                          </div>
+                          
+                                
+                            </div>
+                          
+                          </div> -->
+                          
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
                  </form>
               </div>
                  
             </div>
-          
+        
             
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
@@ -887,7 +956,7 @@
     <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
     <script src="./assets/vendor/libs/select2/select2.js"></script>
     <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
-    <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+    <!-- <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script> -->
     <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
     <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
     <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
@@ -910,6 +979,51 @@
 
      <script src="./assets/vendor/js/chart.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>
+     <script>
+      $(document).ready(function () {
+  // Initialize select2 for the existing dropdowns
+  $('.select2').select2();
 
+  // Add new row when plus button is clicked
+  $('#my-table').on('click', '.add-row', function () {
+    var newRow = `
+    <tr>
+       <td class="w-30"> 
+          <select id="select-name-acount" class="select2 form-select" data-allow-clear="true">
+                                        <option value="AK">   برنامج المقاولات</option>
+                                        <option value="HI">المحاسبة العامة</option>
+                                        <option value="CA">الضراب</option>
+                                        <option value="NV">شون قانونية</option>
+                                    
+                                      </select>                            
+      </td>
+                                  
+    <td>
+           <input type="number"  class="form-control" placeholder="عدد المستخدمين">   
+
+      </td>
+                              
+        
+        <td class="d-flex justify-content-center">
+          <a class="bg-danger text-bg-danger  p-1 d-flex align-items-center justify-content-center rounded delete-row" href="javascript:void(0);" title="حذف">
+            <i class="fa-solid fa-trash fs-5"></i>
+          </a>
+        </td>
+      </tr>`;
+
+    // Append the new row
+    $('#my-table tbody').append(newRow);
+
+    // Reinitialize select2 for the new dropdown
+    $('.select2').select2();
+  });
+
+  // Delete row when delete button is clicked
+  $('#my-table').on('click', '.delete-row', function () {
+    $(this).closest('tr').remove();
+  });
+});
+
+    </script>
   </body>
 </html>
