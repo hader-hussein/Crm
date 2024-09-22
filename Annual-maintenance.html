@@ -42,6 +42,10 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
    
    
@@ -568,7 +572,7 @@
                 <div class="container-xxl d-flex h-100">
                   <ul class="menu-inner">
                     <!-- Dashboards -->
-                    <li class="menu-item active">
+                    <li class="menu-item">
                       <a href="index.html" class="menu-link ">
                         <i class="menu-icon tf-icons ti ti-smart-home"></i>
                         <div data-i18n="Dashboards">Dashboards</div>
@@ -658,7 +662,7 @@
                     </ul>
                   </li>
                     <!--  Maintenance  -->
-                    <li class="menu-item">
+                    <li class="menu-item active">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons ti ti-settings"></i>
                         <div data-i18n=" Maintenance "> 
@@ -667,7 +671,7 @@
                       </a>
 
                       <ul class="menu-sub">
-                        <li class="menu-item ">
+                        <li class="menu-item">
                           <a href="Company-profile.html" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-file"></i>
                             <div data-i18n="Company profile">  
@@ -677,7 +681,7 @@
 
                         </li>
                     
-                        <li class="menu-item">
+                        <li class="menu-item active">
                           <a href="Annual-maintenance.html" class="menu-link" target="_blank">
                             <i class="menu-icon tf-icons ti ti-settings"></i>
                             <div data-i18n="Annual maintenance">   
@@ -696,7 +700,80 @@
             <!-- Content -->
            
             <div class="container-xxl flex-grow-1 container-p-y">
-              
+                <div class="card comonent-hader-top">
+                  <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
+                    <div class="row mx-0 d-flex flex-wrap  justify-content-between   align-items-center pt-2">
+                      <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
+                        <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">  الصيانة الشركات</span>  </strong>
+
+
+                      </div>
+                      <div class="col text-end">
+                        <a href="Company-profile.html" class="btn btn-primary waves-effect waves-light btn-add">  اضافة شركة</a>
+      
+                      </div>
+                    </div>
+                    
+                  </div>
+                
+              </div>
+              <div class="card comonent-hader-top p-2 mt-4">
+                <div class="table-responsive text-nowrap rounded ">
+                  <table class="table table-bordered table-hover rounded ">
+                    <thead class="table-light">
+                      <tr class="fw-bold">
+                        <th class="fw-bold">التسلسل</th>
+
+                        <th class="fw-bold"> اسم الشركة</th>
+                        <th class="fw-bold"> اسم موظف المسؤل</th>
+                        <th class="fw-bold">  تاريخ بداية العقد</th>
+                        <th class="fw-bold">   تاريخ نهاية العقد</th>
+                        <th class="fw-bold">    رقم الشركة</th>
+                        <th class="fw-bold">   النوع  </th>
+
+                        <th class="fw-bold">  مدة  العميل   </th>
+
+                        <th class="fw-bold">  مبلغ الصيانة </th>
+                        <th class="fw-bold">  تاريخ الاستحقاق </th>
+                        <th class="fw-bold">   الحالة</th>
+
+                        <th class="fw-bold">  نوع النظام</th>
+                        <th class="fw-bold">   عدد المستخدمين</th>
+                        <th class="fw-bold">  الاجمالى </th>
+
+                        <th class="fw-bold"> Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                       <tr class="text-center">
+                        
+                        <td>1</td>
+                        <td>شركة الاغذية</td>
+                        <td>احمد محمد</td>
+                        <td>1-1-2024</td>
+                        <td>29-12-2025</td>
+                        <td>0403230988</td>
+                        <td>شهرى</td>
+                        <td>4</td>
+                        <td>3000</td>
+                        <td>1-5-2024</td>
+                        <td>لم يتم السداد</td>
+                        <td>برنامج المحاسبة العام</td>
+                        <td>5</td>
+                        <td>5000</td>
+                        <td class="d-flex justify-content-center">
+                          <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
+                          <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="ProjectDetails.html" title="تفاصيل المشروع"><i class="ti ti-eye  fs-4"></i> </a>
+
+                          <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
+
+
+                        </td>
+                       </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
                  
             </div>
           
@@ -785,8 +862,16 @@
     <!-- Vendors JS -->
     <script src="./assets/vendor/js/dropdown-hover.js"></script>
     <script src="./assets/vendor/js/mega-dropdown.js"></script>
-    <!-- Vendors JS -->
     <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="./assets/vendor/libs/select2/select2.js"></script>
+    <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+    <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+    <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
+
+    <!-- Vendors JS -->
   
 
     
@@ -799,6 +884,7 @@
      <!-- Page JS -->
      <script src="./assets/js/charts-apex.js"></script>
      <script src="./assets/js/cards-advance.js"></script>
+     <script src="./assets/js/forms-selects.js"></script>
 
      <script src="./assets/vendor/js/chart.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>

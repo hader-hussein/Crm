@@ -42,6 +42,10 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
    
    
@@ -568,7 +572,7 @@
                 <div class="container-xxl d-flex h-100">
                   <ul class="menu-inner">
                     <!-- Dashboards -->
-                    <li class="menu-item active">
+                    <li class="menu-item">
                       <a href="index.html" class="menu-link ">
                         <i class="menu-icon tf-icons ti ti-smart-home"></i>
                         <div data-i18n="Dashboards">Dashboards</div>
@@ -658,7 +662,7 @@
                     </ul>
                   </li>
                     <!--  Maintenance  -->
-                    <li class="menu-item">
+                    <li class="menu-item active">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons ti ti-settings"></i>
                         <div data-i18n=" Maintenance "> 
@@ -667,7 +671,7 @@
                       </a>
 
                       <ul class="menu-sub">
-                        <li class="menu-item ">
+                        <li class="menu-item active">
                           <a href="Company-profile.html" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-file"></i>
                             <div data-i18n="Company profile">  
@@ -696,7 +700,102 @@
             <!-- Content -->
            
             <div class="container-xxl flex-grow-1 container-p-y">
-              
+                <div class="card comonent-hader-top">
+                  <div class="card-body py-2 px-md-2 px-2 card-widget-separator">
+                    <div class="row mx-0 d-flex flex-wrap  justify-content-between   align-items-center pt-2">
+                      <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
+                        <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> اضافة شركة</span>  </strong>
+
+
+                      </div>
+                      <div class="col text-end">
+                        <a href="Annual-maintenance.html" class="btn btn-primary waves-effect waves-light btn-add"> مشاهدة الكل</a>
+      
+                      </div>
+                    </div>
+                    
+                  </div>
+                
+              </div>
+              <div class="card comonent-hader-top p-2 mt-4">
+                 <form class="row mx-0">
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="name-compony" class="form-label">    اسم الشركة<span class="start-form">*</span></label>
+                      <input type="text" class="form-control" id="name-compony" placeholder="    اسم الشركة ">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="name-employee" class="form-label">    اسم موظف المسؤل<span class="start-form">*</span></label>
+                      <input type="text" class="form-control" id="name-employee" placeholder="اسم موظف المسؤل ">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="date-start" class="form-label">      تاريخ بداية العقد<span class="start-form">*</span></label>
+                      <input type="date" class="form-control" id="date-start">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="date-start" class="form-label">      تاريخ نهاية العقد<span class="start-form">*</span></label>
+                      <input type="date" class="form-control" id="date-start">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="date-phone" class="form-label"> رقم الشركة<span class="start-form">*</span></label>
+                      <input type="tel" class="form-control" id="date-phone" placeholder="رقم الشركة">
+                    </div>
+                  
+                    <div class="col-md-3 mb-3 col-12">
+                      <label class="form-label" for="Maintenance-type"> نوعه الصيانة</label>
+                      <select class="select2 from-select" id="Maintenance-type">
+                        <option > سنوى </option>
+                        <option >شهرى  </option>
+  
+                        <option>  شامل</option>
+                  
+                      </select>
+                    </div>
+                    <div class="col-md-3 mb-3 col-12">
+                      <label class="form-label" for="select-project4"> نوعه النظام</label>
+                      <select class="select2 from-select" id="select-project4">
+                        <option > برنامج المحاسبة العامة </option>
+                        <option >برنامج ادارة المخزون  </option>
+  
+                        <option>  برنامج ادارة المناديب</option>
+                  
+                      </select>
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="number-user" class="form-label">  عدد المستخدمين<span class="start-form">*</span></label>
+                      <input type="number" class="form-control" id="number-user" placeholder=" عدد المستخدمين">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="date-number" class="form-label">  المبلغ<span class="start-form">*</span></label>
+                      <input type="number" class="form-control" id="date-number" placeholder=" المبلغ">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="file-user" class="form-label">   المرفقات<span class="start-form">*</span></label>
+                      <input type="file" class="form-control" id="file-user">
+                    </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="rate" class="form-label">   نسبة الصيانة السنوية<span class="start-form">*</span></label>
+                      <input type="number" class="form-control" id="rate">
+                    </div>
+                    <div class="col-md-3 mb-3 col-12">
+                      <label class="form-label" for="condition">  الحالة</label>
+                      <select class="select2 from-select" id="condition">
+                        <option >   تم السداد </option>
+                        <option >  لم يتم سداد  </option>                  
+                      </select>
+                    </div>
+                    <div class="mb-3 col-md-12 col-12">
+                      <label for="condetion" class="form-label">     الملاحظات<span class="start-form">*</span></label>
+                      <textarea type="text" class="form-control" id="condetion" rows="2"></textarea>
+                    </div>
+                    <div class="col-12">
+                           
+                      <button class="btn btn-primary btn-next waves-effect waves-light" type="submit">
+                        حفظ
+                        
+                      </button>
+                    </div>
+                 </form>
+              </div>
                  
             </div>
           
@@ -785,8 +884,16 @@
     <!-- Vendors JS -->
     <script src="./assets/vendor/js/dropdown-hover.js"></script>
     <script src="./assets/vendor/js/mega-dropdown.js"></script>
-    <!-- Vendors JS -->
     <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="./assets/vendor/libs/select2/select2.js"></script>
+    <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+    <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+    <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
+
+    <!-- Vendors JS -->
   
 
     
@@ -799,6 +906,7 @@
      <!-- Page JS -->
      <script src="./assets/js/charts-apex.js"></script>
      <script src="./assets/js/cards-advance.js"></script>
+     <script src="./assets/js/forms-selects.js"></script>
 
      <script src="./assets/vendor/js/chart.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>
