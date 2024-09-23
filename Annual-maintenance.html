@@ -58,6 +58,17 @@
     <script src="./assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="./assets/js/config.js"></script>
+    <style>
+      .select2-container--default *{
+z-index: 100000000 !important;
+      }
+      .select2-selection__arrow{
+        z-index: 100 !important;
+      }
+      .select-type .select2-container--default {
+    z-index: 100000 !important;
+}
+    </style>
   </head>
 
   <body>
@@ -727,7 +738,6 @@
                         <th class="fw-bold"> اسم الشركة</th>
                         <th class="fw-bold"> اسم موظف المسؤل</th>
                         <th class="fw-bold">  تاريخ بداية العقد</th>
-                        <th class="fw-bold">   تاريخ نهاية العقد</th>
                         <th class="fw-bold">    رقم الشركة</th>
                         <th class="fw-bold">   النوع  </th>
 
@@ -736,6 +746,7 @@
                         <th class="fw-bold">  مبلغ الصيانة </th>
                         <th class="fw-bold">  تاريخ الاستحقاق </th>
                         <th class="fw-bold">   الحالة</th>
+                        <th class="fw-bold">تاريخ السداد</th>
 
                         <th class="fw-bold">  نوع النظام</th>
                         <th class="fw-bold">   عدد المستخدمين</th>
@@ -751,27 +762,29 @@
                         <td>شركة الاغذية</td>
                         <td>احمد محمد</td>
                         <td>1-1-2024</td>
-                        <td>29-12-2025</td>
                         <td>0403230988</td>
                         <td>شهرى</td>
                         <td>4</td>
                         <td>3000</td>
                         <td>1-5-2024</td>
                         <td>لم يتم السداد</td>
+                        <td>1-5-2024</td>
+                        
                         <td>برنامج المحاسبة العام</td>
-                        <td class="d-flex justify-content-between align-items-center">
-                          <span>5</span>
-                          <button type="button" class="btn bg-success text-bg-success p-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <i class="ti ti-pencil  fs-4"></i> 
-                          </button>
+                        <td>
+                          5
+                          
                         </td>
                         <td>5000</td>
                         <td class="d-flex justify-content-center">
                           <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
-                          <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"   data-bs-target="#view-modeil" data-bs-toggle="modal"  title="تفاصيل الشركة"><i class="ti ti-eye  fs-4"></i> </a>
+                          <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer"  href="./sales/print/Annual-maintenance.html"  title="تفاصيل الشركة"><i class="ti ti-eye  fs-4"></i> </a>
 
                           <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
-
+                          <button type="button" class="btn bg-success text-bg-success p-1" data-bs-toggle="modal" data-bs-target="#exampleModal" title="تعديل عدد المستخدمين">
+                            <i class="ti ti-pencil  fs-4"></i> 
+                            تعديل المستخدمين
+                          </button>
 
                         </td>
                        </tr>
@@ -782,9 +795,9 @@
                  
             </div>
           
-             <!-- Modal -->
+             <!-- Modal تعديل عدد المستخدمين-->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
+              <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel"> تعديل عدد المستخدين</h1>
@@ -792,34 +805,44 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+                      <div class="table-responsive text-nowrap rounded card-datatable  pb-4">
 
                         <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
                           <thead class="table-light">
                             <tr class="fw-bold text-center">
                           
                               <th class="fw-bold">  اسم البرنامج</th>
-  
+
                               <th class="fw-bold"> عدد المستخدمين</th>
                               
-  
+
+                              <th class="fw-bold px-1"> Actions</th>
                             </tr>
                           </thead>
                           <tbody class="table-border-bottom-0">
                             <tr>
-  
-                              <td>
-                                <input type="text"  class="form-control" value=" برنامج المحاسبة العامة" placeholder=" اسم البرنامج" readonly>   
-  
+
+                              <td class="w-100"> 
+                                <select id="select-p" class="select2 form-select" data-allow-clear="true">
+                                  <option value="AK">   برنامج المقاولات</option>
+                                  <option value="HI">المحاسبة العامة</option>
+                                  <option value="CA">الضراب</option>
+                                  <option value="NV">شون قانونية</option>
+                              
+                                </select>
                               </td>
                               
-  
+
                               <td>
-                                <input type="number"  class="form-control" placeholder="عدد المستخدمين" value="5">   
-  
+                                <input type="number"  class="form-control">   
+
                               </td>
-  
-                              
+
+                              <td class="d-flex justify-content-center">
+                                <a class="bg-primary text-bg-primary p-1 d-flex align-items-center justify-content-center  rounded add-row" href="javascript:void(0);" title="اضافة">
+                                  <i class="fa-solid fa-plus fs-5"></i>
+                                </a>
+                              </td>
                             </tr>
                           </tbody>
                       
@@ -827,10 +850,10 @@
                        
                         <div>
                        
-  
-  
+
+
                         </div>
-  
+
                       </div>
                       <button class="btn btn-primary btn-next waves-effect waves-light" type="submit">
                         حفظ
@@ -849,7 +872,7 @@
                 </div>
                 <!-- Modal الحالة-->
                 <div class="modal fade" id="edit-modeil" tabindex="-1" aria-labelledby="edit-modeil" aria-hidden="true">
-              <div class="modal-dialog">
+              <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel"> تعديل الحالة</h1>
@@ -857,7 +880,7 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="col-md-6 mb-3 col-12">
+                      <div class="col-md-12 mb-3 col-12">
                         <label class="form-label" for="condition">  الحالة</label>
                         <select class="select2 from-select" id="condition">
                           <option>   تم السداد </option>
@@ -989,6 +1012,52 @@
 
      <script src="./assets/vendor/js/chart.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>
+     <script>
+      $(document).ready(function () {
+  // Initialize select2 for the existing dropdowns
+  $('.select2').select2();
+
+  // Add new row when plus button is clicked
+  $('#my-table').on('click', '.add-row', function () {
+    var newRow = `
+    <tr>
+       <td class="w-30"> 
+          <select id="select-name-acount" class="select2 form-select" data-allow-clear="true">
+                                        <option value="AK">   برنامج المقاولات</option>
+                                        <option value="HI">المحاسبة العامة</option>
+                                        <option value="CA">الضراب</option>
+                                        <option value="NV">شون قانونية</option>
+                                    
+                                      </select>                            
+      </td>
+                                  
+    <td>
+           <input type="number"  class="form-control">   
+
+      </td>
+                              
+        
+        <td class="d-flex justify-content-center">
+          <a class="bg-danger text-bg-danger  p-1 d-flex align-items-center justify-content-center rounded delete-row" href="javascript:void(0);" title="حذف">
+            <i class="fa-solid fa-trash fs-5"></i>
+          </a>
+        </td>
+      </tr>`;
+
+    // Append the new row
+    $('#my-table tbody').append(newRow);
+
+    // Reinitialize select2 for the new dropdown
+    $('.select2').select2();
+  });
+
+  // Delete row when delete button is clicked
+  $('#my-table').on('click', '.delete-row', function () {
+    $(this).closest('tr').remove();
+  });
+});
+
+    </script>
 
   </body>
 </html>

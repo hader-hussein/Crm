@@ -739,17 +739,15 @@ z-index: 100000000 !important;
                       <input type="text" class="form-control" id="name-employee" placeholder="اسم موظف المسؤل ">
                     </div>
                     <div class="mb-3 col-md-3 col-12">
-                      <label for="date-start" class="form-label">      تاريخ بداية العقد<span class="start-form">*</span></label>
-                      <input type="date" class="form-control" id="date-start">
-                    </div>
-                    <div class="mb-3 col-md-3 col-12">
-                      <label for="date-start" class="form-label">      تاريخ نهاية العقد<span class="start-form">*</span></label>
-                      <input type="date" class="form-control" id="date-start">
-                    </div>
-                    <div class="mb-3 col-md-3 col-12">
                       <label for="date-phone" class="form-label"> رقم الشركة<span class="start-form">*</span></label>
                       <input type="tel" class="form-control" id="date-phone" placeholder="رقم الشركة">
                     </div>
+                    <div class="mb-3 col-md-3 col-12">
+                      <label for="date-start" class="form-label">      تاريخ بداية العقد<span class="start-form">*</span></label>
+                      <input type="date" class="form-control" id="date-start">
+                    </div>
+                  
+                   
                   
                     <div class="col-md-3 mb-3 col-12">
                       <label class="form-label" for="Maintenance-type"> نوعه الصيانة</label>
@@ -771,13 +769,7 @@ z-index: 100000000 !important;
                       <label for="rate" class="form-label">   نسبة الصيانة السنوية<span class="start-form">*</span></label>
                       <input type="number" class="form-control" id="rate">
                     </div>
-                    <div class="col-md-3 mb-3 col-12">
-                      <label class="form-label" for="condition">  الحالة</label>
-                      <select class="select2 from-select" id="condition">
-                        <option >   تم السداد </option>
-                        <option >  لم يتم سداد  </option>                  
-                      </select>
-                    </div>
+                   
                     <div class="mb-3 col-md-3 col-12">
                       <label for="file-user" class="form-label">   المرفقات<span class="start-form">*</span></label>
                       <input type="file" class="form-control" id="file-user">
@@ -801,7 +793,7 @@ z-index: 100000000 !important;
                     </div>
                       <!-- Modal -->
                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
+                    <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h1 class="modal-title fs-5" id="exampleModalLabel">اضافة البرنامج / عدد المستخدين</h1>
@@ -825,7 +817,7 @@ z-index: 100000000 !important;
                               <tbody class="table-border-bottom-0">
                                 <tr>
 
-                                  <td class="w-30"> 
+                                  <td class="w-100"> 
                                     <select id="select-p" class="select2 form-select" data-allow-clear="true">
                                       <option value="AK">   برنامج المقاولات</option>
                                       <option value="HI">المحاسبة العامة</option>
@@ -837,7 +829,7 @@ z-index: 100000000 !important;
                                   
 
                                   <td>
-                                    <input type="number"  class="form-control" placeholder="عدد المستخدمين">   
+                                    <input type="number"  class="form-control">   
 
                                   </td>
 
@@ -862,7 +854,7 @@ z-index: 100000000 !important;
                                 
                             </div>
                           
-                          </div> -->
+                          </div> 
                           
                         </div>
                         
@@ -1005,7 +997,7 @@ z-index: 100000000 !important;
       </td>
                                   
     <td>
-           <input type="number"  class="form-control" placeholder="عدد المستخدمين">   
+           <input type="number"  class="form-control">   
 
       </td>
                               
