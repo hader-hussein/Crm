@@ -759,7 +759,12 @@
                         <td>1-5-2024</td>
                         <td>لم يتم السداد</td>
                         <td>برنامج المحاسبة العام</td>
-                        <td>5</td>
+                        <td class="d-flex justify-content-between align-items-center">
+                          <span>5</span>
+                          <button type="button" class="btn bg-success text-bg-success p-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="ti ti-pencil  fs-4"></i> 
+                          </button>
+                        </td>
                         <td>5000</td>
                         <td class="d-flex justify-content-center">
                           <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-modeil" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
@@ -777,7 +782,103 @@
                  
             </div>
           
-            
+             <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> تعديل عدد المستخدين</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+
+                        <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
+                          <thead class="table-light">
+                            <tr class="fw-bold text-center">
+                          
+                              <th class="fw-bold">  اسم البرنامج</th>
+  
+                              <th class="fw-bold"> عدد المستخدمين</th>
+                              
+  
+                            </tr>
+                          </thead>
+                          <tbody class="table-border-bottom-0">
+                            <tr>
+  
+                              <td>
+                                <input type="text"  class="form-control" value=" برنامج المحاسبة العامة" placeholder=" اسم البرنامج" readonly>   
+  
+                              </td>
+                              
+  
+                              <td>
+                                <input type="number"  class="form-control" placeholder="عدد المستخدمين" value="5">   
+  
+                              </td>
+  
+                              
+                            </tr>
+                          </tbody>
+                      
+                        </table>
+                       
+                        <div>
+                       
+  
+  
+                        </div>
+  
+                      </div>
+                      <button class="btn btn-primary btn-next waves-effect waves-light" type="submit">
+                        حفظ
+                        
+                      </button>
+                    </form>
+                    
+                    
+                          
+                      </div>
+                    
+                    </div> 
+                    
+                  </div>
+                  
+                </div>
+                <!-- Modal الحالة-->
+                <div class="modal fade" id="edit-modeil" tabindex="-1" aria-labelledby="edit-modeil" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> تعديل الحالة</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="col-md-6 mb-3 col-12">
+                        <label class="form-label" for="condition">  الحالة</label>
+                        <select class="select2 from-select" id="condition">
+                          <option>   تم السداد </option>
+                          <option>  لم يتم سداد  </option>                  
+                        </select>
+                      </div>
+                      <button class="btn btn-primary btn-next waves-effect waves-light" type="submit">
+                        تعديل
+                        
+                      </button>
+                    </form>
+                    
+                    
+                          
+                      </div>
+                    
+                    </div> 
+                    
+                  </div>
+                  
+                </div>
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">

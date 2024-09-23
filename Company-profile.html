@@ -62,6 +62,12 @@
       .select2-container--default *{
 z-index: 100000000 !important;
       }
+      .select2-selection__arrow{
+        z-index: 100 !important;
+      }
+      .select-type .select2-container--default {
+    z-index: 100000 !important;
+}
     </style>
   </head>
 
@@ -747,7 +753,7 @@ z-index: 100000000 !important;
                   
                     <div class="col-md-3 mb-3 col-12">
                       <label class="form-label" for="Maintenance-type"> نوعه الصيانة</label>
-                      <select class="select2 from-select" id="Maintenance-type">
+                      <select class="select2 from-select select-type" id="Maintenance-type">
                         <option > سنوى </option>
                         <option >شهرى  </option>
   
@@ -794,7 +800,7 @@ z-index: 100000000 !important;
                       </button>
                     </div>
                       <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                       <div class="modal-content">
                         <div class="modal-header">
